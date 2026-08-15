@@ -1,0 +1,31 @@
+<!-- ============================================ -->
+<!-- EXERCISE DETAIL PAGE -->
+<!-- ============================================ -->
+
+<div class="page" id="exerciseDetailPage">
+  <div class="back-header">
+    <button id="backFromExercise" class="back-btn glass">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <h2 class="page-title" id="exerciseDetailTitle">
+      <i class="fas fa-list-check"></i> Exercise
+    </h2>
+    <button id="addQuestionsBtn" class="add-btn glass">
+      <i class="fas fa-plus"></i>
+    </button>
+  </div>
+  
+  <!-- Filter Bar -->
+  <div class="filter-bar glass" id="exerciseFilter">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="not-done">Pending</button>
+    <button class="filter-btn" data-filter="done">Done</button>
+    <button class="filter-btn" data-filter="wrong">Wrong</button>
+    <button class="filter-btn" data-filter="review">Review</button>
+    <button class="filter-btn" data-filter="easy">Easy</button>
+    <button class="filter-btn" data-filter="medium">Medium</button>
+    <button class="filter-btn" data-filter="hard">Hard</button>
+  </div>
+  
+  <div id="questionsContainer" class="questions-container"></div>
+</div>

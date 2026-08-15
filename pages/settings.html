@@ -1,0 +1,222 @@
+<!-- ============================================ -->
+<!-- SETTINGS PAGE - REDESIGNED UI -->
+<!-- ============================================ -->
+
+<div class="settings-page">
+  
+  <!-- Settings Header -->
+  <div class="settings-header glass-3d">
+    <div class="settings-header-content">
+      <button id="backFromSettings" class="settings-back-btn">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <div class="settings-header-info">
+        <div class="settings-header-icon">
+          <i class="fas fa-cog"></i>
+        </div>
+        <div>
+          <h2>Settings</h2>
+          <p>Manage your account and preferences</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Account Section -->
+  <div class="settings-card glass-3d">
+    <div class="settings-card-header">
+      <i class="fas fa-lock"></i>
+      <span>Account</span>
+    </div>
+    <div class="settings-item" onclick="showChangePassword()">
+      <div class="settings-item-left">
+        <div class="settings-item-icon blue">
+          <i class="fas fa-key"></i>
+        </div>
+        <div class="settings-item-info">
+          <span class="settings-item-label">Change Password</span>
+          <span class="settings-item-desc">Update your account password</span>
+        </div>
+      </div>
+      <i class="fas fa-chevron-right settings-arrow"></i>
+    </div>
+    <div class="settings-item danger" onclick="confirmDeleteAccount()">
+      <div class="settings-item-left">
+        <div class="settings-item-icon red">
+          <i class="fas fa-trash-alt"></i>
+        </div>
+        <div class="settings-item-info">
+          <span class="settings-item-label">Delete Account</span>
+          <span class="settings-item-desc">Permanently delete your account and data</span>
+        </div>
+      </div>
+      <i class="fas fa-chevron-right settings-arrow"></i>
+    </div>
+  </div>
+  
+  <!-- Data Section -->
+  <div class="settings-card glass-3d">
+    <div class="settings-card-header">
+      <i class="fas fa-database"></i>
+      <span>Data Management</span>
+    </div>
+    
+    <!-- Sync -->
+    <div class="settings-item">
+      <div class="settings-item-left">
+        <div class="settings-item-icon green">
+          <i class="fas fa-cloud-upload-alt"></i>
+        </div>
+        <div class="settings-item-info">
+          <span class="settings-item-label">Sync Status</span>
+          <span class="settings-item-desc" id="settingsSyncStatus">☁ Local Only</span>
+        </div>
+      </div>
+      <button id="settingsSyncNow" class="settings-action-btn primary">
+        <i class="fas fa-sync"></i> Sync
+      </button>
+    </div>
+    
+    <!-- Last Sync -->
+    <div class="settings-item">
+      <div class="settings-item-left">
+        <div class="settings-item-icon gray">
+          <i class="fas fa-clock"></i>
+        </div>
+        <div class="settings-item-info">
+          <span class="settings-item-label">Last Sync</span>
+          <span class="settings-item-desc" id="settingsLastSync">Never</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Export -->
+    <div class="settings-item">
+      <div class="settings-item-left">
+        <div class="settings-item-icon blue">
+          <i class="fas fa-file-export"></i>
+        </div>
+        <div class="settings-item-info">
+          <span class="settings-item-label">Export Data</span>
+          <span class="settings-item-desc">Download your data as JSON</span>
+        </div>
+      </div>
+      <button id="settingsExportData" class="settings-action-btn">
+        <i class="fas fa-download"></i> Export
+      </button>
+    </div>
+    
+    <!-- Import -->
+    <div class="settings-item">
+      <div class="settings-item-left">
+        <div class="settings-item-icon purple">
+          <i class="fas fa-file-import"></i>
+        </div>
+        <div class="settings-item-info">
+          <span class="settings-item-label">Import Data</span>
+          <span class="settings-item-desc">Restore from a JSON backup</span>
+        </div>
+      </div>
+      <button id="settingsImportData" class="settings-action-btn">
+        <i class="fas fa-upload"></i> Import
+      </button>
+      <input type="file" id="settingsImportFile" accept=".json" style="display: none;">
+    </div>
+    
+    <!-- Reset -->
+    <div class="settings-item danger" onclick="resetProgress()" style="border-bottom: none;">
+      <div class="settings-item-left">
+        <div class="settings-item-icon red">
+          <i class="fas fa-undo-alt"></i>
+        </div>
+        <div class="settings-item-info">
+          <span class="settings-item-label">Reset Progress</span>
+          <span class="settings-item-desc">Clear all your progress data</span>
+        </div>
+      </div>
+      <i class="fas fa-chevron-right settings-arrow"></i>
+    </div>
+  </div>
+  
+  <!-- Clear Cloud Data -->
+<div class="settings-item danger" onclick="clearCloudData()">
+  <div class="settings-item-left">
+    <div class="settings-item-icon red">
+      <i class="fas fa-cloud-upload-alt"></i>
+    </div>
+    <div class="settings-item-info">
+      <span class="settings-item-label">Clear Cloud Data</span>
+      <span class="settings-item-desc">Delete all your data from the server</span>
+    </div>
+  </div>
+  <i class="fas fa-chevron-right settings-arrow"></i>
+</div>
+  
+  <!-- Appearance Section -->
+  <div class="settings-card glass-3d">
+    <div class="settings-card-header">
+      <i class="fas fa-palette"></i>
+      <span>Appearance</span>
+    </div>
+    <div class="settings-item" style="border-bottom: none;">
+      <div class="settings-item-left">
+        <div class="settings-item-icon yellow">
+          <i class="fas fa-sun"></i>
+        </div>
+        <div class="settings-item-info">
+          <span class="settings-item-label">Theme</span>
+          <span class="settings-item-desc" id="settingsThemeDisplay">☀️ Light</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- About Section -->
+  <div class="settings-card glass-3d">
+    <div class="settings-card-header">
+      <i class="fas fa-info-circle"></i>
+      <span>About</span>
+    </div>
+    <div class="settings-item">
+      <div class="settings-item-left">
+        <div class="settings-item-icon gray">
+          <i class="fas fa-code-branch"></i>
+        </div>
+        <div class="settings-item-info">
+          <span class="settings-item-label">Version</span>
+          <span class="settings-item-desc" id="settingsVersion">v2.0.0</span>
+        </div>
+      </div>
+    </div>
+    <div class="settings-item" onclick="showDeveloperInfo()">
+      <div class="settings-item-left">
+        <div class="settings-item-icon blue">
+          <i class="fas fa-user-cog"></i>
+        </div>
+        <div class="settings-item-info">
+          <span class="settings-item-label">Developer Info</span>
+          <span class="settings-item-desc">About the creator</span>
+        </div>
+      </div>
+      <i class="fas fa-chevron-right settings-arrow"></i>
+    </div>
+    <div class="settings-item" style="border-bottom: none;">
+      <div class="settings-item-left">
+        <div class="settings-item-icon red">
+          <i class="fas fa-heart"></i>
+        </div>
+        <div class="settings-item-info">
+          <span class="settings-item-label">Made with ❤️ by Nomis</span>
+          <span class="settings-item-desc">JEE Tracker v2.0.0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Logout Button -->
+  <button id="settingsLogoutBtn" class="settings-logout-btn">
+    <i class="fas fa-sign-out-alt"></i>
+    <span>Logout</span>
+  </button>
+  
+</div>

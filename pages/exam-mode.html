@@ -1,0 +1,101 @@
+<!-- ============================================ -->
+<!-- EXAM MODE PAGE - REDESIGNED UI -->
+<!-- ============================================ -->
+
+<div class="exam-mode-page">
+  
+  <!-- Exam Mode Header -->
+  <div class="exam-header glass-3d">
+    <div class="exam-header-content">
+      <div class="exam-header-icon">
+        <i class="fas fa-star"></i>
+      </div>
+      <div>
+        <h2>Exam Mode</h2>
+        <p>Focus on your weak areas and track your progress</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Toggle Section -->
+  <div class="exam-toggle-card glass-3d">
+    <div class="exam-toggle-content">
+      <div class="exam-toggle-info">
+        <i class="fas fa-toggle-on"></i>
+        <div>
+          <span class="exam-toggle-label">Exam Mode</span>
+          <span class="exam-toggle-desc">Show only questions marked as Wrong, Review, or Hard</span>
+        </div>
+      </div>
+      <div class="exam-toggle-switch">
+        <input type="checkbox" id="examModeToggle">
+        <label for="examModeToggle" class="toggle-slider"></label>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Stats Grid -->
+  <div class="exam-stats-grid">
+    <div class="exam-stat-card glass-3d">
+      <div class="exam-stat-icon red">
+        <i class="fas fa-times-circle"></i>
+      </div>
+      <div class="exam-stat-info">
+        <span class="exam-stat-number" id="examWrong">0</span>
+        <span class="exam-stat-label">Wrong Questions</span>
+      </div>
+    </div>
+    <div class="exam-stat-card glass-3d">
+      <div class="exam-stat-icon yellow">
+        <i class="fas fa-flag"></i>
+      </div>
+      <div class="exam-stat-info">
+        <span class="exam-stat-number" id="examReview">0</span>
+        <span class="exam-stat-label">Review Questions</span>
+      </div>
+    </div>
+    <div class="exam-stat-card glass-3d">
+      <div class="exam-stat-icon orange">
+        <i class="fas fa-star"></i>
+      </div>
+      <div class="exam-stat-info">
+        <span class="exam-stat-number" id="examHard">0</span>
+        <span class="exam-stat-label">Hard Questions</span>
+      </div>
+    </div>
+    <div class="exam-stat-card glass-3d">
+      <div class="exam-stat-icon blue">
+        <i class="fas fa-tasks"></i>
+      </div>
+      <div class="exam-stat-info">
+        <span class="exam-stat-number" id="examHomework">0</span>
+        <span class="exam-stat-label">Homework Pending</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Questions List -->
+  <div class="exam-questions-card glass-3d">
+    <div class="exam-questions-header">
+      <div class="exam-questions-title">
+        <i class="fas fa-list-check"></i>
+        <span>Questions to Review</span>
+        <span class="exam-questions-count" id="examQuestionsCount">0</span>
+      </div>
+      <div class="exam-questions-filters">
+        <button class="exam-filter-btn active" data-filter="all" onclick="filterExamQuestions('all')">All</button>
+        <button class="exam-filter-btn" data-filter="wrong" onclick="filterExamQuestions('wrong')">Wrong</button>
+        <button class="exam-filter-btn" data-filter="review" onclick="filterExamQuestions('review')">Review</button>
+        <button class="exam-filter-btn" data-filter="hard" onclick="filterExamQuestions('hard')">Hard</button>
+      </div>
+    </div>
+    <div id="examQuestionsContainer" class="exam-questions-container">
+      <div class="empty-state">
+        <i class="fas fa-star"></i>
+        <p>No questions to review</p>
+        <span class="sub">Mark questions as Wrong, Review, or Hard to see them here</span>
+      </div>
+    </div>
+  </div>
+  
+</div>

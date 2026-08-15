@@ -1,0 +1,162 @@
+<!-- ============================================ -->
+<!-- GOALS PAGE - REDESIGNED UI -->
+<!-- ============================================ -->
+
+<div class="goals-page">
+  
+  <!-- Goals Header -->
+  <div class="goals-header glass-3d">
+    <div class="goals-header-content">
+      <div class="goals-header-icon">
+        <i class="fas fa-bullseye"></i>
+      </div>
+      <div>
+        <h2>Your Goals</h2>
+        <p>Track your daily, weekly, and monthly targets</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Today's Progress -->
+  <div class="goal-card today-goal glass-3d">
+    <div class="goal-card-header">
+      <div class="goal-title">
+        <i class="fas fa-sun"></i>
+        <span>Today's Progress</span>
+      </div>
+      <span class="goal-date" id="todayDate"></span>
+    </div>
+    <div class="goal-progress-display">
+      <div class="goal-numbers">
+        <span class="goal-current" id="goalsTodaySolved">0</span>
+        <span class="goal-divider">/</span>
+        <span class="goal-target" id="goalsDailyTarget">50</span>
+      </div>
+      <span class="goal-percentage" id="goalsDailyPercent">0%</span>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar-fill" id="goalsDailyFill" style="width: 0%;"></div>
+    </div>
+    <div class="goal-message" id="dailyGoalMessage">
+      <i class="fas fa-info-circle"></i>
+      <span>Complete your daily goal to maintain your streak!</span>
+    </div>
+    <div class="goal-edit">
+      <label>Daily Target:</label>
+      <div class="goal-input-group">
+        <input type="number" id="dailyGoalInput" class="form-input" value="50" min="1" max="500">
+        <button class="btn-primary" id="saveDailyGoal">
+          <i class="fas fa-check"></i> Update
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Weekly Progress -->
+  <div class="goal-card weekly-goal glass-3d">
+    <div class="goal-card-header">
+      <div class="goal-title">
+        <i class="fas fa-calendar-week"></i>
+        <span>Weekly Progress</span>
+      </div>
+      <span class="goal-badge">This Week</span>
+    </div>
+    <div class="goal-progress-display">
+      <div class="goal-numbers">
+        <span class="goal-current" id="goalsWeeklySolved">0</span>
+        <span class="goal-divider">/</span>
+        <span class="goal-target" id="goalsWeeklyTarget">350</span>
+      </div>
+      <span class="goal-percentage" id="goalsWeeklyPercent">0%</span>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar-fill" id="goalsWeeklyFill" style="width: 0%;"></div>
+    </div>
+    <div class="goal-edit">
+      <label>Weekly Target:</label>
+      <div class="goal-input-group">
+        <input type="number" id="weeklyGoalInput" class="form-input" value="350" min="1" max="2000">
+        <button class="btn-primary" id="saveWeeklyGoal">
+          <i class="fas fa-check"></i> Update
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Monthly Progress -->
+  <div class="goal-card monthly-goal glass-3d">
+    <div class="goal-card-header">
+      <div class="goal-title">
+        <i class="fas fa-calendar-alt"></i>
+        <span>Monthly Progress</span>
+      </div>
+      <span class="goal-badge">This Month</span>
+    </div>
+    <div class="goal-progress-display">
+      <div class="goal-numbers">
+        <span class="goal-current" id="goalsMonthlySolved">0</span>
+        <span class="goal-divider">/</span>
+        <span class="goal-target" id="goalsMonthlyTarget">1500</span>
+      </div>
+      <span class="goal-percentage" id="goalsMonthlyPercent">0%</span>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar-fill" id="goalsMonthlyFill" style="width: 0%;"></div>
+    </div>
+    <div class="goal-edit">
+      <label>Monthly Target:</label>
+      <div class="goal-input-group">
+        <input type="number" id="monthlyGoalInput" class="form-input" value="1500" min="1" max="10000">
+        <button class="btn-primary" id="saveMonthlyGoal">
+          <i class="fas fa-check"></i> Update
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Streak Info -->
+  <div class="streak-info-card glass-3d">
+    <div class="streak-info-content">
+      <div class="streak-icon">
+        <i class="fas fa-fire"></i>
+      </div>
+      <div>
+        <span class="streak-label">Current Streak</span>
+        <span class="streak-value" id="goalsStreak">0</span>
+        <span class="streak-days">days</span>
+      </div>
+      <div class="streak-divider"></div>
+      <div>
+        <span class="streak-label">Longest Streak</span>
+        <span class="streak-value" id="goalsLongestStreak">0</span>
+        <span class="streak-days">days</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Quick Stats -->
+  <div class="quick-goal-stats">
+    <div class="quick-stat glass-3d">
+      <i class="fas fa-check-circle" style="color: var(--green);"></i>
+      <div>
+        <span class="quick-number" id="goalsTotalDone">0</span>
+        <span class="quick-label">Total Done</span>
+      </div>
+    </div>
+    <div class="quick-stat glass-3d">
+      <i class="fas fa-tasks" style="color: var(--blue);"></i>
+      <div>
+        <span class="quick-number" id="goalsTotalQuestions">0</span>
+        <span class="quick-label">Total Questions</span>
+      </div>
+    </div>
+    <div class="quick-stat glass-3d">
+      <i class="fas fa-percent" style="color: var(--purple);"></i>
+      <div>
+        <span class="quick-number" id="goalsOverallPercent">0%</span>
+        <span class="quick-label">Overall Progress</span>
+      </div>
+    </div>
+  </div>
+  
+</div>

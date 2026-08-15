@@ -1,0 +1,159 @@
+<!-- ============================================ -->
+<!-- DASHBOARD PAGE -->
+<!-- ============================================ -->
+
+<div class="page" id="dashboardPage">
+  <h2 class="page-title">
+    <i class="fas fa-chart-pie"></i> Dashboard
+  </h2>
+  
+  <!-- Overall Progress -->
+  <div class="overall-progress-card glass">
+    <div class="progress-header">
+      <span class="label">Overall Progress</span>
+      <span class="progress-badge" id="overallBadge">0%</span>
+    </div>
+    
+    <div class="progress-ring-container">
+      <svg class="progress-ring" viewBox="0 0 120 120">
+        <defs>
+          <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#667eea" />
+            <stop offset="100%" stop-color="#764ba2" />
+          </linearGradient>
+        </defs>
+        <circle class="progress-ring-bg" cx="60" cy="60" r="54" />
+        <circle class="progress-ring-fill" cx="60" cy="60" r="54" id="overallRing" />
+      </svg>
+      <div class="progress-ring-center">
+        <i class="fas fa-graduation-cap"></i>
+        <span class="percentage" id="overallPercentage">0%</span>
+      </div>
+    </div>
+    
+    <div class="progress-stats">
+      <div class="stat-item">
+        <span class="stat-number" id="totalSubjects">0</span>
+        <span class="stat-label">Subjects</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" id="totalChapters">0</span>
+        <span class="stat-label">Chapters</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" id="totalQuestions">0</span>
+        <span class="stat-label">Questions</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Quick Stats -->
+  <div class="quick-stats">
+    <div class="stat-card glass" onclick="navigateTo('progress')">
+      <i class="fas fa-check-circle" style="color: var(--green);"></i>
+      <span class="stat-number" id="quickDone">0</span>
+      <span class="stat-label">Done</span>
+    </div>
+    <div class="stat-card glass" onclick="navigateTo('wrongbank')">
+      <i class="fas fa-times-circle" style="color: var(--red);"></i>
+      <span class="stat-number" id="quickWrong">0</span>
+      <span class="stat-label">Wrong</span>
+    </div>
+    <div class="stat-card glass" onclick="navigateTo('reviewbank')">
+      <i class="fas fa-flag" style="color: var(--yellow);"></i>
+      <span class="stat-number" id="quickReview">0</span>
+      <span class="stat-label">Review</span>
+    </div>
+  </div>
+  
+  <!-- Today's Stats & Streak -->
+  <div class="today-stats glass">
+    <div class="today-item">
+      <i class="fas fa-calendar-day"></i>
+      <span class="today-label">Today</span>
+      <span class="today-value" id="todaySolved">0</span>
+      <span class="today-sub">solved</span>
+    </div>
+    <div class="today-divider"></div>
+    <div class="today-item">
+      <i class="fas fa-fire"></i>
+      <span class="today-label">Streak</span>
+      <span class="today-value" id="dashboardStreak">0</span>
+      <span class="today-sub">days</span>
+    </div>
+    <div class="today-divider"></div>
+    <div class="today-item">
+      <i class="fas fa-clock"></i>
+      <span class="today-label">JEE</span>
+      <span class="today-value" id="daysRemaining">365</span>
+      <span class="today-sub">days left</span>
+    </div>
+  </div>
+  
+  <!-- Daily Goal -->
+  <div class="daily-goal glass">
+    <div class="goal-header">
+      <span><i class="fas fa-bullseye"></i> Today's Goal</span>
+      <span id="goalProgress">0%</span>
+    </div>
+    <div class="goal-bar">
+      <div class="goal-fill" id="goalFill" style="width: 0%"></div>
+    </div>
+    <div class="goal-stats">
+      <span><span id="goalCompleted">0</span> / <span id="goalTarget">50</span> questions</span>
+      <span id="goalRemaining">50 remaining</span>
+    </div>
+  </div>
+  
+  <!-- Homework Overview -->
+  <div class="homework-overview glass">
+    <div class="homework-header">
+      <span><i class="fas fa-tasks"></i> Homework</span>
+      <a href="#" onclick="navigateTo('homework')" class="homework-view-all">View All →</a>
+    </div>
+    <div class="homework-stats">
+      <div class="hw-stat">
+        <span class="hw-number" id="hwPending">0</span>
+        <span class="hw-label">Pending</span>
+      </div>
+      <div class="hw-stat">
+        <span class="hw-number" id="hwDueToday">0</span>
+        <span class="hw-label">Due Today</span>
+      </div>
+      <div class="hw-stat">
+        <span class="hw-number" id="hwOverdue">0</span>
+        <span class="hw-label">Overdue</span>
+      </div>
+      <div class="hw-stat">
+        <span class="hw-number" id="hwCompleted">0</span>
+        <span class="hw-label">Completed</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Continue Studying -->
+  <div id="continueStudying" class="continue-studying glass">
+    <div class="continue-header">
+      <i class="fas fa-play-circle"></i>
+      <span>Continue Studying</span>
+    </div>
+    <div id="continueContent">
+      <div class="empty-state">
+        <i class="fas fa-book-open"></i>
+        <p>No active sessions</p>
+        <span class="sub">Start a chapter to track progress</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Subject Progress -->
+  <div class="section">
+    <h3 class="section-title">
+      <i class="fas fa-layer-group"></i> Your Subjects
+    </h3>
+    <div id="subjectProgressList" class="subject-progress-list"></div>
+  </div>
+  </div>
+</div>

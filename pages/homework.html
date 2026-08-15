@@ -1,0 +1,28 @@
+<!-- ============================================ -->
+<!-- HOMEWORK PAGE -->
+<!-- ============================================ -->
+
+<div class="page" id="homeworkPage">
+  <div class="back-header">
+    <button id="backFromHomework" class="back-btn glass">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <h2 class="page-title">
+      <i class="fas fa-tasks"></i> Homework
+    </h2>
+    <button id="addHomeworkBtn" class="add-btn glass">
+      <i class="fas fa-plus"></i>
+    </button>
+  </div>
+  
+  <div class="homework-filters glass">
+    <button class="hw-filter-btn active" data-hwfilter="all">All</button>
+    <button class="hw-filter-btn" data-hwfilter="pending">Pending</button>
+    <button class="hw-filter-btn" data-hwfilter="due-today">Due Today</button>
+    <button class="hw-filter-btn" data-hwfilter="due-tomorrow">Due Tomorrow</button>
+    <button class="hw-filter-btn" data-hwfilter="overdue">Overdue</button>
+    <button class="hw-filter-btn" data-hwfilter="completed">Completed</button>
+  </div>
+  
+  <div id="homeworkContainer" class="homework-container"></div>
+</div>
