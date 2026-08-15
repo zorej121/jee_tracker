@@ -1,0 +1,31 @@
+{
+  "subject": "mathematics",
+  "chapters": {
+    "sets-relations": {
+      "name": "Sets & Relations",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 30 },
+        "jee-main": { "name": "JEE Main", "questions": 15 }
+      }
+    },
+    "quadratic-equations": {
+      "name": "Quadratic Equations",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 30 },
+        "ex2": { "name": "Exercise 2", "questions": 25 },
+        "jee-main": { "name": "JEE Main", "questions": 15 },
+        "jee-advanced": { "name": "JEE Advanced", "questions": 10 }
+      }
+    },
+    "trigonometry": {
+      "name": "Trigonometry",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 30 },
+        "ex2": { "name": "Exercise 2", "questions": 25 },
+        "ex3": { "name": "Exercise 3", "questions": 20 },
+        "jee-main": { "name": "JEE Main", "questions": 15 },
+        "jee-advanced": { "name": "JEE Advanced", "questions": 10 }
+      }
+    }
+  }
+}

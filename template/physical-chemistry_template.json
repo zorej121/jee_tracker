@@ -1,0 +1,28 @@
+{
+  "subject": "physical-chemistry",
+  "chapters": {
+    "mole-concept": {
+      "name": "Mole Concept",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 30 },
+        "jee-main": { "name": "JEE Main", "questions": 15 }
+      }
+    },
+    "thermodynamics": {
+      "name": "Thermodynamics",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 30 },
+        "ex2": { "name": "Exercise 2", "questions": 25 },
+        "jee-main": { "name": "JEE Main", "questions": 15 },
+        "jee-advanced": { "name": "JEE Advanced", "questions": 10 }
+      }
+    },
+    "chemical-kinetics": {
+      "name": "Chemical Kinetics",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 25 },
+        "jee-main": { "name": "JEE Main", "questions": 15 }
+      }
+    }
+  }
+}

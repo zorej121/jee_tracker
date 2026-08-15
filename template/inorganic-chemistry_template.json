@@ -1,0 +1,28 @@
+{
+  "subject": "inorganic-chemistry",
+  "chapters": {
+    "periodic-table": {
+      "name": "Periodic Table",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 30 },
+        "jee-main": { "name": "JEE Main", "questions": 15 }
+      }
+    },
+    "chemical-bonding": {
+      "name": "Chemical Bonding",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 30 },
+        "ex2": { "name": "Exercise 2", "questions": 25 },
+        "jee-main": { "name": "JEE Main", "questions": 15 },
+        "jee-advanced": { "name": "JEE Advanced", "questions": 10 }
+      }
+    },
+    "s-block": {
+      "name": "s-Block Elements",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 25 },
+        "jee-main": { "name": "JEE Main", "questions": 15 }
+      }
+    }
+  }
+}

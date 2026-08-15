@@ -1,0 +1,30 @@
+{
+  "subject": "organic-chemistry",
+  "chapters": {
+    "general-organic": {
+      "name": "General Organic Chemistry",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 30 },
+        "ex2": { "name": "Exercise 2", "questions": 25 },
+        "jee-main": { "name": "JEE Main", "questions": 15 },
+        "jee-advanced": { "name": "JEE Advanced", "questions": 10 }
+      }
+    },
+    "hydrocarbons": {
+      "name": "Hydrocarbons",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 30 },
+        "jee-main": { "name": "JEE Main", "questions": 15 }
+      }
+    },
+    "haloalkanes": {
+      "name": "Haloalkanes & Haloarenes",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 25 },
+        "ex2": { "name": "Exercise 2", "questions": 20 },
+        "jee-main": { "name": "JEE Main", "questions": 15 },
+        "jee-advanced": { "name": "JEE Advanced", "questions": 10 }
+      }
+    }
+  }
+}

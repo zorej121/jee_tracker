@@ -1,0 +1,58 @@
+{
+  "subject": "physics",
+  "chapters": {
+    "kinematics": {
+      "name": "Kinematics",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 40 },
+        "ex2": { "name": "Exercise 2", "questions": 35 },
+        "ex3": { "name": "Exercise 3", "questions": 30 },
+        "jee-main": { "name": "JEE Main", "questions": 25 },
+        "jee-advanced": { "name": "JEE Advanced", "questions": 20 }
+      }
+    },
+    "newtons-laws": {
+      "name": "Newton's Laws of Motion",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 35 },
+        "ex2": { "name": "Exercise 2", "questions": 30 },
+        "jee-main": { "name": "JEE Main", "questions": 20 },
+        "jee-advanced": { "name": "JEE Advanced", "questions": 15 }
+      }
+    },
+    "work-energy": {
+      "name": "Work, Energy & Power",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 35 },
+        "ex2": { "name": "Exercise 2", "questions": 30 },
+        "ex3": { "name": "Exercise 3", "questions": 25 },
+        "jee-main": { "name": "JEE Main", "questions": 20 },
+        "jee-advanced": { "name": "JEE Advanced", "questions": 15 }
+      }
+    },
+    "rotational-motion": {
+      "name": "Rotational Motion",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 30 },
+        "ex2": { "name": "Exercise 2", "questions": 25 },
+        "jee-main": { "name": "JEE Main", "questions": 15 },
+        "jee-advanced": { "name": "JEE Advanced", "questions": 10 }
+      }
+    },
+    "gravitation": {
+      "name": "Gravitation",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 25 },
+        "jee-main": { "name": "JEE Main", "questions": 15 }
+      }
+    },
+    "properties-of-matter": {
+      "name": "Properties of Matter",
+      "exercises": {
+        "ex1": { "name": "Exercise 1", "questions": 30 },
+        "ex2": { "name": "Exercise 2", "questions": 25 },
+        "jee-main": { "name": "JEE Main", "questions": 15 }
+      }
+    }
+  }
+}
